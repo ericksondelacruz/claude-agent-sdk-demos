@@ -85,7 +85,7 @@ export class AIClient {
 
     for await (const message of query({
       prompt,
-      options: mergedOptions
+      options: { ...mergedOptions, allowedTools: mergedOptions.allowedTools?.filter(t => t !== "Bash") }
     })) {
       yield message;
     }
