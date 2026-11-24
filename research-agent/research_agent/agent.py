@@ -71,7 +71,7 @@ async def chat():
                 "charts using Python/matplotlib via Bash. Saves charts to files/charts/ and writes "
                 "a data summary to files/data/. Use this before the report-writer to add visual insights."
             ),
-            tools=["Glob", "Read", "Bash", "Write"],
+            tools=["Glob", "Read", "Write"],
             prompt=data_analyst_prompt,
             model="haiku"
         ),
